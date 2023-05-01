@@ -9,10 +9,10 @@ public class ShelterModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Long petId;
     private String shelter_name;
     private String state;
     private String phone;
-
 
     public Long getId() {
         return id;
@@ -20,6 +20,14 @@ public class ShelterModel {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getPetId() {
+        return petId;
+    }
+
+    public void setPetId(Long petId) {
+        this.petId = petId;
     }
 
     public String getShelter_name() {

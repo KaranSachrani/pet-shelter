@@ -1,9 +1,7 @@
 package com.java.petshelter.service;
 
 import com.java.petshelter.model.PetModel;
-import com.java.petshelter.model.UserModel;
 import com.java.petshelter.repository.PetRepository;
-import com.java.petshelter.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
