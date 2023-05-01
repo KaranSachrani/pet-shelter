@@ -8,8 +8,8 @@ public class ApplicationModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long user_id;
-    private Long pet_id;
+    private Long userId;
+    private Long petId;
 
     public Long getId() {
         return id;
@@ -19,19 +19,19 @@ public class ApplicationModel {
         this.id = id;
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
-    public Long getPet_id() {
-        return pet_id;
+    public Long getPetId() {
+        return petId;
     }
 
-    public void setPet_id(Long pet_id) {
-        this.pet_id = pet_id;
+    public void setPetId(Long petId) {
+        this.petId = petId;
     }
 }

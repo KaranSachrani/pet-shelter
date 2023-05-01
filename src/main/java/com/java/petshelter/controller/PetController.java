@@ -26,4 +26,14 @@ public class PetController {
         String response=petService.save(petModel);
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
+
+    @GetMapping("/get/adoptable")
+    public ResponseEntity<Object> getAdoptablePets(){
+        return new ResponseEntity<>(petService.getAdoptablePets(), HttpStatus.OK);
+    }
+
+    @GetMapping("/getbyAgeType")
+    public ResponseEntity<Object> getPetByAgeOrType(@RequestParam Integer age, String type){
+        return new ResponseEntity<>(petService.getPetByAgeOrType(age,type), HttpStatus.OK);
+    }
 }

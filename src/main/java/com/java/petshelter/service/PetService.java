@@ -31,4 +31,12 @@ public class PetService {
         petRepository.save(petModel);
         return "Record Saved Successfully.";
     }
+
+    public List<PetModel> getAdoptablePets() {
+        return petRepository.findByAdoptable(true);
+    }
+
+    public List<PetModel> getPetByAgeOrType(Integer age, String type) {
+        return petRepository.findByAgeOrType(age,type);
+    }
 }

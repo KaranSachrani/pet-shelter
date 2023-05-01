@@ -11,6 +11,7 @@ public class PetModel {
     String pet_name;
     String type;
     Integer age;
+    Boolean adoptable = true;
 
     public Long getId() {
         return id;
@@ -42,5 +43,13 @@ public class PetModel {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public Boolean getAdoptable() {
+        return adoptable;
+    }
+
+    public void setAdoptable(Boolean adoptable) {
+        this.adoptable = adoptable;
     }
 }
