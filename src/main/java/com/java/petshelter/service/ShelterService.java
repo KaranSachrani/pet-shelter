@@ -13,7 +13,10 @@ public class ShelterService {
     @Autowired
     ShelterRepository shelterRepository;
 
+    //Receives the Pet object and save it into the Pet table
     public String create(ShelterModel shelterModel) {
+
+        //Performs validation for null and empty attributes
         if(shelterModel==null || shelterModel.getPetId()==null || shelterModel.getShelter_name()==null
                 || shelterModel.getPhone()==null || shelterModel.getState()==null){
             return "Invalid Request.";
@@ -24,7 +27,9 @@ public class ShelterService {
             return "Empty Parameters found.";
         }
 
+        //Sets id null becasue we need to insert it as new record not update
         shelterModel.setId(null);
+        //finaly saves the object into table
         shelterRepository.save(shelterModel);
         return "Shelter Created Successfully.";
     }

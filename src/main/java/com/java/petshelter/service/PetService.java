@@ -17,7 +17,10 @@ public class PetService {
         return petRepository.findAll();
     }
 
+    //Receives the Pet object and save it into the Pet table
     public String save(PetModel petModel){
+
+        //Performs the attribute validation, no attribute should be null or empty
         if(petModel==null || petModel.getPet_name()==null || petModel.getType()==null
                 || petModel.getAge()==null){
             return "Invalid Request.";
@@ -26,6 +29,8 @@ public class PetService {
         if(petModel.getPet_name().isEmpty() || petModel.getType().isEmpty()){
             return "Empty Parameters found.";
         }
+
+        //Saves it after validation
         petRepository.save(petModel);
         return "Record Saved Successfully.";
     }
